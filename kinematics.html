@@ -5,122 +5,223 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinematics | Fahri Physics</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- MathJax -->
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>
 <body>
 
-    <header class="lesson-header">
-        <h1>Kinematics</h1>
-        <p>The study of motion without worrying about what causes it.</p>
-        <a href="index.html" class="back-button">← Back to Homepage</a>
-    </header>
+<!-- NAV -->
+<nav>
+    <a href="index.html" class="nav-logo">Fahri Physics</a>
+    <ul class="nav-links">
+        <li><a href="index.html#topics">Topics</a></li>
+        <li><a href="index.html#about">About</a></li>
+    </ul>
+</nav>
 
-    <main class="lesson-container">
-        <section class="lesson-section">
+<!-- HEADER -->
+<header class="lesson-header">
+    <div class="lesson-header-inner">
+        <div class="lesson-breadcrumb">
+            <a href="index.html">Home</a> &rsaquo; Classical Physics &rsaquo; Kinematics
+        </div>
+        <div class="lesson-category-tag">Classical Physics</div>
+        <h1>Kinematics</h1>
+        <p>The study of motion — how objects move through space and time, without asking why.</p>
+        <div class="lesson-header-meta">
+            <a href="index.html" class="back-button">&#8592; Back to Topics</a>
+            <span class="lesson-read-time">~8 min read</span>
+        </div>
+    </div>
+</header>
+
+<!-- BODY: content + sidebar -->
+<div class="lesson-body">
+
+    <!-- MAIN CONTENT -->
+    <main class="lesson-content">
+
+        <section class="lesson-section" id="what-is-kinematics">
+            <div class="lesson-section-num">Section 01</div>
             <h2>What is Kinematics?</h2>
             <p>
-                Kinematics is a branch of physics that describes how objects move.
-                It focuses on quantities such as position, displacement, velocity,
-                speed, and acceleration without discussing the forces causing the motion.
+                Kinematics is the branch of classical mechanics that describes <strong>how</strong> objects move.
+                It deals with quantities like position, displacement, velocity, and acceleration —
+                without asking <em>why</em> the motion happens (that's dynamics, which comes later).
             </p>
+            <div class="callout tip">
+                <span class="callout-icon">&#128161;</span>
+                <div class="callout-body">
+                    <strong>Think of it this way</strong>
+                    <p>Kinematics is the language of motion. Before you can understand forces, you need to be able to precisely describe what an object is doing.</p>
+                </div>
+            </div>
         </section>
 
-        <section class="lesson-section">
-            <h2>Important Quantities</h2>
+        <section class="lesson-section" id="key-quantities">
+            <div class="lesson-section-num">Section 02</div>
+            <h2>Key Quantities</h2>
+            <p>Every kinematic problem uses some combination of these five quantities. Understanding the distinction between scalar and vector is critical.</p>
 
-            <h3>1. Distance</h3>
-            <p>
-                Distance is the total path traveled by an object. It does not care about direction.
-                It is a scalar quantity.
-            </p>
+            <div class="def-grid">
+                <div class="def-card">
+                    <div class="def-card-term">Distance</div>
+                    <div class="def-card-desc">Total length of path traveled. Does not depend on direction.</div>
+                    <span class="def-card-badge badge-scalar">Scalar</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">Displacement</div>
+                    <div class="def-card-desc">Change in position from start to end point. Direction matters.</div>
+                    <span class="def-card-badge badge-vector">Vector</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">Speed</div>
+                    <div class="def-card-desc">How fast an object moves — rate of change of distance.</div>
+                    <span class="def-card-badge badge-scalar">Scalar</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">Velocity</div>
+                    <div class="def-card-desc">Rate of change of displacement. Speed with a direction.</div>
+                    <span class="def-card-badge badge-vector">Vector</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">Acceleration</div>
+                    <div class="def-card-desc">Rate of change of velocity. Can be a change in speed or direction.</div>
+                    <span class="def-card-badge badge-vector">Vector</span>
+                </div>
+            </div>
 
-            <h3>2. Displacement</h3>
-            <p>
-                Displacement is the change in position from the starting point to the ending point.
-                It includes direction, so it is a vector quantity.
-            </p>
-
-            <h3>3. Speed</h3>
-            <p>
-                Speed tells us how fast an object moves. It is the rate of change of distance.
-            </p>
-            <p>
-                \[
-                v = \frac{\Delta x}{\Delta t}
-                \]
-            </p>
-
-            <h3>4. Velocity</h3>
-            <p>
-                Velocity is similar to speed, but it includes direction. It is the rate of change of displacement.
-            </p>
-            <p class="equation">
-                Velocity = Displacement / Time
-            </p>
-
-            <h3>5. Acceleration</h3>
-            <p>
-                Acceleration tells us how quickly velocity changes with time.
-                An object accelerates when it speeds up, slows down, or changes direction.
-            </p>
-            <p class="equation">
-                Acceleration = Change in Velocity / Time
-            </p>
+            <div class="callout note">
+                <span class="callout-icon">&#128204;</span>
+                <div class="callout-body">
+                    <strong>Scalar vs Vector</strong>
+                    <p>Scalar quantities have magnitude only. Vector quantities have both magnitude and direction. This distinction changes how you add, subtract, and use them in equations.</p>
+                </div>
+            </div>
         </section>
 
-        <section class="lesson-section">
-            <h2>Example</h2>
-            <p>
-                Suppose a car moves 100 meters in 5 seconds in a straight line.
-                Its average speed is:
-            </p>
-            <p class="equation">
-                Speed = 100 / 5 = 20 m/s
-            </p>
-            <p>
-                If the car moves in a straight line in one direction, then its average velocity is also 20 m/s.
-            </p>
+        <section class="lesson-section" id="equations">
+            <div class="lesson-section-num">Section 03</div>
+            <h2>Core Equations</h2>
+
+            <h3>Average Velocity</h3>
+            <p>Velocity is the rate of change of displacement over time:</p>
+            <div class="equation">
+                \[ v = \frac{\Delta x}{\Delta t} \]
+            </div>
+            <p>where \(\Delta x\) is displacement and \(\Delta t\) is the time interval.</p>
+
+            <h3>Average Acceleration</h3>
+            <p>Acceleration is the rate of change of velocity over time:</p>
+            <div class="equation">
+                \[ a = \frac{\Delta v}{\Delta t} = \frac{v_f - v_i}{\Delta t} \]
+            </div>
+
+            <h3>Kinematic Equations (constant acceleration)</h3>
+            <p>When acceleration is constant, four equations relate all kinematic quantities:</p>
+            <div class="equation">
+                \[ v_f = v_i + a\,t \]
+            </div>
+            <div class="equation">
+                \[ x = v_i t + \tfrac{1}{2}a\,t^2 \]
+            </div>
+            <div class="equation">
+                \[ v_f^2 = v_i^2 + 2a\,x \]
+            </div>
+
+            <div class="callout key">
+                <span class="callout-icon">&#128273;</span>
+                <div class="callout-body">
+                    <strong>Key condition</strong>
+                    <p>These equations only apply when acceleration is <em>constant</em>. For variable acceleration, you need calculus (integration).</p>
+                </div>
+            </div>
         </section>
 
-        <section class="lesson-section">
+        <section class="lesson-section" id="example">
+            <div class="lesson-section-num">Section 04</div>
+            <h2>Worked Example</h2>
+            <p>
+                A car starts from rest and accelerates uniformly at \(3\,\text{m/s}^2\) for 6 seconds.
+                Find its final velocity and the distance traveled.
+            </p>
+
+            <h3>Step 1 — List what you know</h3>
+            <ul>
+                <li>Initial velocity: \(v_i = 0\,\text{m/s}\)</li>
+                <li>Acceleration: \(a = 3\,\text{m/s}^2\)</li>
+                <li>Time: \(t = 6\,\text{s}\)</li>
+            </ul>
+
+            <h3>Step 2 — Find final velocity</h3>
+            <div class="equation">
+                \[ v_f = v_i + at = 0 + 3 \times 6 = 18\,\text{m/s} \]
+            </div>
+
+            <h3>Step 3 — Find distance</h3>
+            <div class="equation">
+                \[ x = v_i t + \tfrac{1}{2}at^2 = 0 + \tfrac{1}{2}(3)(6^2) = 54\,\text{m} \]
+            </div>
+
+            <div class="callout tip">
+                <span class="callout-icon">&#9989;</span>
+                <div class="callout-body">
+                    <strong>Always list knowns first</strong>
+                    <p>Identifying which variables you have determines which kinematic equation to use. This habit prevents errors in more complex problems.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section" id="why-it-matters">
+            <div class="lesson-section-num">Section 05</div>
             <h2>Why Kinematics Matters</h2>
             <p>
-                Kinematics is the foundation of classical mechanics. Before studying force and energy,
-                students need to understand how motion is described. It is also useful in engineering,
-                astronomy, sports analysis, and many real-world systems.
+                Kinematics is the foundation of classical mechanics. Engineers use it to design safe braking systems,
+                astronomers use it to track planetary motion, and athletes and coaches use it to optimize performance.
+            </p>
+            <p>
+                More importantly for this course — kinematics builds the <strong>habit of thinking quantitatively</strong>
+                about physical phenomena. That same habit carries directly into solid state physics and materials science,
+                where describing how electrons and atoms move is equally essential.
             </p>
         </section>
 
-        <section class="lesson-section">
-            <h2>Watch the Lesson</h2>
-            <p>
-                Later, you can embed your YouTube teaching video here.
-            </p>
-
+        <section class="lesson-section" id="video">
+            <div class="lesson-section-num">Section 06</div>
+            <h2>Video Lesson</h2>
+            <p>A video lecture will be embedded here once recorded.</p>
             <div class="video-placeholder">
-                <p>YouTube video coming soon</p>
+                <span>&#127916;</span>
+                YouTube video coming soon
             </div>
         </section>
 
         <section class="learning-reference">
             <h2>References</h2>
-            <p>
-                1. Halliday, D., Resnick, R., & Walker, J. (2014). Fundamentals of Physics (10th ed.). Wiley.
-            </p>
-            <p>
-                2. Tipler, P. A., & Mosca, G. (2008). Physics for Scientists and Engineers (6th ed.). W. H. Freeman.
-            </p>
-            <p>
-                3. Serway, R. A., & Jewett, J. W. (2013). Physics for Scientists and Engineers (9th ed.). Cengage Learning.
-            </p>
+            <p>1. Halliday, D., Resnick, R., &amp; Walker, J. (2014). <em>Fundamentals of Physics</em> (10th ed.). Wiley.</p>
+            <p>2. Tipler, P. A., &amp; Mosca, G. (2008). <em>Physics for Scientists and Engineers</em> (6th ed.). W. H. Freeman.</p>
+            <p>3. Serway, R. A., &amp; Jewett, J. W. (2013). <em>Physics for Scientists and Engineers</em> (9th ed.). Cengage Learning.</p>
         </section>
+
     </main>
 
-    <footer>
-        <p>© 2026 Fahri Physics</p>
-    </footer>
+    <!-- TOC SIDEBAR -->
+    <aside class="lesson-toc">
+        <div class="lesson-toc-title">On this page</div>
+        <ol>
+            <li><a href="#what-is-kinematics">What is Kinematics?</a></li>
+            <li><a href="#key-quantities">Key Quantities</a></li>
+            <li><a href="#equations">Core Equations</a></li>
+            <li><a href="#example">Worked Example</a></li>
+            <li><a href="#why-it-matters">Why It Matters</a></li>
+            <li><a href="#video">Video Lesson</a></li>
+        </ol>
+    </aside>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Ahmad Nurul Fahri &mdash; Fahri Physics</p>
+</footer>
 
 </body>
 </html>

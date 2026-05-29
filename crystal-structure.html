@@ -5,183 +5,327 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crystal Structure | Fahri Physics</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>
 <body>
 
-    <header class="lesson-header">
+<!-- NAV -->
+<nav>
+    <a href="index.html" class="nav-logo">Fahri Physics</a>
+    <ul class="nav-links">
+        <li><a href="index.html#topics">Topics</a></li>
+        <li><a href="index.html#about">About</a></li>
+    </ul>
+</nav>
+
+<!-- HEADER -->
+<header class="lesson-header">
+    <div class="lesson-header-inner">
+        <div class="lesson-breadcrumb">
+            <a href="index.html">Home</a> &rsaquo;
+            <a href="solidstatephysics.html">Solid State Physics</a> &rsaquo;
+            Crystal Structure
+        </div>
+        <div class="lesson-category-tag">Solid State Physics</div>
         <h1>Crystal Structure</h1>
-        <p>The atomic arrangement of solids and the foundation of solid state physics.</p>
-        <a href="solidstatephysics.html" class="back-button">← Back to Solid State Physics</a>
-        <a href="index.html" class="back-button">← Back to Homepage</a>
-    </header>
+        <p>How atoms arrange themselves in solids — and why that arrangement controls everything.</p>
+        <div class="lesson-header-meta">
+            <a href="solidstatephysics.html" class="back-button">&#8592; Back to Solid State Physics</a>
+            <span class="lesson-read-time">~12 min read</span>
+        </div>
+    </div>
+</header>
 
-    <main class="lesson-container">
+<!-- BODY -->
+<div class="lesson-body">
 
-        <section class="lesson-section">
+    <main class="lesson-content">
+
+        <section class="lesson-section" id="what-is-crystal">
+            <div class="lesson-section-num">Section 01</div>
             <h2>What is Crystal Structure?</h2>
             <p>
                 Crystal structure describes how atoms, ions, or molecules are arranged in a solid.
-                In crystalline materials, this arrangement is not random. Instead, it repeats regularly
-                in three dimensions. This repeating order is one of the main reasons why crystalline
-                materials show well-defined physical properties.
+                In crystalline materials, this arrangement is <strong>not random</strong> — it repeats
+                regularly in three dimensions throughout the entire material.
             </p>
             <p>
-                Understanding crystal structure is essential because many material properties such as
-                ionic transport, electronic conductivity, mechanical behavior, and optical response are
-                strongly influenced by atomic arrangement.
+                This repeating order is what gives crystalline materials their well-defined, predictable
+                physical properties. It is also what makes powerful tools like X-ray diffraction, reciprocal
+                lattice theory, and band structure calculations possible.
             </p>
+            <div class="callout tip">
+                <span class="callout-icon">&#128161;</span>
+                <div class="callout-body">
+                    <strong>Why it matters</strong>
+                    <p>Ionic transport, electronic conductivity, mechanical strength, and optical response all depend
+                    strongly on how atoms are arranged. Knowing the crystal structure is the first step to understanding any solid material.</p>
+                </div>
+            </div>
         </section>
 
-        <section class="lesson-section">
+        <section class="lesson-section" id="lattice-basis">
+            <div class="lesson-section-num">Section 02</div>
             <h2>Lattice and Basis</h2>
+            <p>Every crystal structure is built from two ingredients:</p>
+
+            <div class="def-grid">
+                <div class="def-card">
+                    <div class="def-card-term">Lattice</div>
+                    <div class="def-card-desc">An infinite, periodic set of mathematical points in space. It captures the translational symmetry of the crystal.</div>
+                    <span class="def-card-badge badge-vector">Geometric</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">Basis</div>
+                    <div class="def-card-desc">The atom or group of atoms attached to each lattice point. Adds the chemical content to the geometry.</div>
+                    <span class="def-card-badge badge-scalar">Chemical</span>
+                </div>
+            </div>
+
+            <div class="equation">
+                \[ \text{Crystal Structure} = \text{Lattice} + \text{Basis} \]
+            </div>
+
             <p>
-                A crystal structure can be understood as a combination of a <strong>lattice</strong>
-                and a <strong>basis</strong>.
+                Place the same basis on every lattice point and you reproduce the full crystal.
+                This decomposition lets you separate <em>geometry</em> (lattice) from <em>chemistry</em> (basis).
             </p>
 
-            <p class="equation">
-                \[
-                \text{Crystal Structure} = \text{Lattice} + \text{Basis}
-                \]
-            </p>
-
-            <p>
-                The lattice is an abstract mathematical array of points repeated periodically in space.
-                The basis is the atom or group of atoms attached to each lattice point. When the same
-                basis is placed on every lattice point, the full crystal structure is produced.
-            </p>
+            <div class="callout note">
+                <span class="callout-icon">&#128204;</span>
+                <div class="callout-body">
+                    <strong>Example</strong>
+                    <p>Copper (FCC): the lattice is face-centered cubic, the basis is a single Cu atom.
+                    NaCl: the lattice is also FCC, but the basis contains one Na and one Cl — different chemistry, same lattice type.</p>
+                </div>
+            </div>
         </section>
 
-        <section class="lesson-section">
-            <h2>Unit Cell</h2>
+        <section class="lesson-section" id="unit-cell">
+            <div class="lesson-section-num">Section 03</div>
+            <h2>Unit Cell and Lattice Parameters</h2>
             <p>
-                A unit cell is the smallest repeating block that can generate the entire crystal by translation.
-                It contains the essential structural information of the solid. When the unit cell is repeated
-                along the lattice vectors, the whole crystal is reconstructed.
+                The unit cell is the smallest repeating block that generates the entire crystal by translation.
+                It contains all the structural information needed to reconstruct the full solid.
             </p>
+            <p>In three dimensions, a unit cell is described by six lattice parameters:</p>
+            <div class="equation">
+                \[ a,\; b,\; c \quad \text{(edge lengths)}, \qquad \alpha,\; \beta,\; \gamma \quad \text{(angles)} \]
+            </div>
             <p>
-                In three dimensions, the geometry of a unit cell is described by the lattice parameters:
+                Here \(a\), \(b\), \(c\) are the lengths of the cell edges, and \(\alpha\), \(\beta\), \(\gamma\)
+                are the angles between them.
             </p>
-
-            <p class="equation">
-                \[
-                a,\; b,\; c,\; \alpha,\; \beta,\; \gamma
-                \]
-            </p>
-
-            <p>
-                Here, \(a\), \(b\), and \(c\) are the cell edge lengths, while \(\alpha\), \(\beta\),
-                and \(\gamma\) are the angles between the edges.
-            </p>
+            <div class="callout key">
+                <span class="callout-icon">&#128273;</span>
+                <div class="callout-body">
+                    <strong>Key point</strong>
+                    <p>The choice of unit cell is not unique, but the conventional choice reflects the full symmetry
+                    of the crystal as clearly as possible — this is called the primitive unit cell or the conventional cell.</p>
+                </div>
+            </div>
         </section>
 
-        <section class="lesson-section">
-            <h2>Why Periodicity Matters</h2>
+        <section class="lesson-section" id="crystal-systems">
+            <div class="lesson-section-num">Section 04</div>
+            <h2>The Seven Crystal Systems</h2>
             <p>
-                The periodic nature of crystals allows physicists to describe solids using symmetry and
-                translational repetition. This periodicity is what makes concepts like diffraction,
-                reciprocal lattice, and band structure possible. Without periodic order, many powerful
-                tools of solid state physics would not work in the same way.
+                All crystals fall into one of seven systems, classified by the relationship between
+                their lattice parameters:
             </p>
+
+            <div class="def-grid">
+                <div class="def-card">
+                    <div class="def-card-term">Cubic</div>
+                    <div class="def-card-desc">\(a = b = c\), all angles 90°. Highest symmetry. Examples: Fe (BCC), Cu (FCC), NaCl.</div>
+                    <span class="def-card-badge badge-vector">Highest symmetry</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">Tetragonal</div>
+                    <div class="def-card-desc">\(a = b \neq c\), all angles 90°. Example: TiO₂ (rutile).</div>
+                    <span class="def-card-badge badge-scalar">Uniaxial</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">Hexagonal</div>
+                    <div class="def-card-desc">\(a = b \neq c\), angles: 90°, 90°, 120°. Example: Mg, Zn (HCP).</div>
+                    <span class="def-card-badge badge-scalar">6-fold axis</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">Orthorhombic</div>
+                    <div class="def-card-desc">\(a \neq b \neq c\), all angles 90°. Example: sulfur, olivine.</div>
+                    <span class="def-card-badge badge-scalar">3 unequal axes</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">Monoclinic</div>
+                    <div class="def-card-desc">\(a \neq b \neq c\), one angle \(\neq\) 90°. Example: gypsum.</div>
+                    <span class="def-card-badge badge-scalar">1 oblique angle</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">Triclinic</div>
+                    <div class="def-card-desc">All edges and angles unequal. Lowest symmetry. Example: kyanite.</div>
+                    <span class="def-card-badge badge-scalar">Lowest symmetry</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">Trigonal</div>
+                    <div class="def-card-desc">\(a = b = c\), all angles equal but \(\neq\) 90°. Example: calcite, quartz.</div>
+                    <span class="def-card-badge badge-vector">3-fold axis</span>
+                </div>
+            </div>
         </section>
 
-        <section class="lesson-section">
-            <h2>Common Crystal Systems</h2>
+        <section class="lesson-section" id="cubic-structures">
+            <div class="lesson-section-num">Section 05</div>
+            <h2>The Cubic Structures in Detail</h2>
+            <p>Cubic structures are the most important in metals and many functional materials. Three variants exist:</p>
+
+            <h3>Simple Cubic (SC)</h3>
             <p>
-                Crystals are grouped into different crystal systems based on their unit-cell geometry.
-                The seven classical crystal systems are:
+                Atoms only at the 8 corners of a cube. Each corner atom is shared among 8 adjacent cells,
+                so the effective number of atoms per unit cell is \(8 \times \frac{1}{8} = 1\).
+                Coordination number: 6. Packing efficiency: ~52%. Very rare (polonium is the classic example).
             </p>
 
+            <h3>Body-Centered Cubic (BCC)</h3>
+            <p>
+                Corner atoms plus one atom at the body center. Atoms per unit cell: \(8 \times \frac{1}{8} + 1 = 2\).
+                Coordination number: 8. Packing efficiency: ~68%. Found in Fe (room temperature), W, Cr, Mo.
+            </p>
+
+            <h3>Face-Centered Cubic (FCC)</h3>
+            <p>
+                Corner atoms plus one atom on each of the 6 faces. Atoms per unit cell:
+                \(8 \times \frac{1}{8} + 6 \times \frac{1}{2} = 4\).
+                Coordination number: 12. Packing efficiency: ~74%. Found in Cu, Al, Ni, Au, Ag.
+            </p>
+
+            <div class="callout tip">
+                <span class="callout-icon">&#128161;</span>
+                <div class="callout-body">
+                    <strong>FCC and HCP are close-packed</strong>
+                    <p>Both achieve the theoretical maximum packing fraction of ~74%. The difference is their
+                    stacking sequence: FCC is ABCABC..., HCP is ABABAB... This affects slip systems and ductility.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section" id="coordination">
+            <div class="lesson-section-num">Section 06</div>
+            <h2>Coordination Number and Packing Efficiency</h2>
+            <p>
+                The <strong>coordination number</strong> is the count of nearest-neighbor atoms surrounding any given atom.
+                It is a direct consequence of crystal structure and affects bonding character, stability, and transport.
+            </p>
+
+            <div class="def-grid">
+                <div class="def-card">
+                    <div class="def-card-term">SC</div>
+                    <div class="def-card-desc">Coordination number: 6. Packing: ~52%.</div>
+                    <span class="def-card-badge badge-scalar">Least packed</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">BCC</div>
+                    <div class="def-card-desc">Coordination number: 8. Packing: ~68%.</div>
+                    <span class="def-card-badge badge-scalar">Moderate</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">FCC / HCP</div>
+                    <div class="def-card-desc">Coordination number: 12. Packing: ~74%.</div>
+                    <span class="def-card-badge badge-vector">Close-packed</span>
+                </div>
+            </div>
+
+            <div class="callout note">
+                <span class="callout-icon">&#128204;</span>
+                <div class="callout-body">
+                    <strong>Why packing matters in battery materials</strong>
+                    <p>In layered oxide cathodes like LiCoO₂, the coordination environment of lithium
+                    and cobalt sites directly determines ion diffusion pathways and redox voltage. Crystal structure
+                    is not just geometry — it is electrochemistry.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section" id="periodicity">
+            <div class="lesson-section-num">Section 07</div>
+            <h2>Why Periodicity is Powerful</h2>
+            <p>
+                The periodic nature of crystals makes the problem of describing a solid tractable.
+                Instead of tracking the positions of \(10^{23}\) atoms, you only need to describe the
+                unit cell — and periodicity does the rest.
+            </p>
+            <p>
+                This periodicity is the foundation of:
+            </p>
             <ul>
-                <li>Cubic</li>
-                <li>Tetragonal</li>
-                <li>Orthorhombic</li>
-                <li>Hexagonal</li>
-                <li>Trigonal</li>
-                <li>Monoclinic</li>
-                <li>Triclinic</li>
+                <li><strong>X-ray diffraction</strong> — constructive interference only occurs when Bragg's law is satisfied by the periodic lattice</li>
+                <li><strong>Reciprocal lattice</strong> — the Fourier transform of the real lattice, essential for understanding diffraction patterns and band structure</li>
+                <li><strong>Bloch's theorem</strong> — electron wavefunctions in a periodic potential take a specific form, leading directly to band theory</li>
             </ul>
-
-            <p>
-                Each system has a different relation between the cell lengths and angles, and this affects
-                the symmetry and physical behavior of the material.
-            </p>
         </section>
 
-        <section class="lesson-section">
-            <h2>Examples of Important Crystal Structures</h2>
-
-            <h3>1. Simple Cubic (SC)</h3>
-            <p>
-                Atoms are located only at the corners of a cube. This is a useful model structure but is
-                relatively rare in real materials.
-            </p>
-
-            <h3>2. Body-Centered Cubic (BCC)</h3>
-            <p>
-                In addition to corner atoms, one atom is located at the center of the cube. Metals such as
-                iron can adopt this structure.
-            </p>
-
-            <h3>3. Face-Centered Cubic (FCC)</h3>
-            <p>
-                Atoms are located at the cube corners and at the centers of all cube faces. This structure
-                is common in many metals such as aluminum, copper, and nickel.
-            </p>
-
-            <h3>4. Hexagonal Close-Packed (HCP)</h3>
-            <p>
-                This is another efficient packing arrangement found in many metallic systems. It differs from
-                FCC in stacking sequence and symmetry.
-            </p>
-        </section>
-
-        <section class="lesson-section">
-            <h2>Coordination Number and Packing</h2>
-            <p>
-                The coordination number is the number of nearest neighbors surrounding an atom. This is an
-                important structural concept because it affects stability, bonding, and transport pathways.
-                Close-packed structures such as FCC and HCP have high coordination numbers and efficient
-                atomic packing.
-            </p>
-        </section>
-
-        <section class="lesson-section">
+        <section class="lesson-section" id="materials-connection">
+            <div class="lesson-section-num">Section 08</div>
             <h2>Connection to Materials Science</h2>
             <p>
-                In materials science, crystal structure is not just a geometric description. It directly
-                influences diffusion channels, phase stability, redox behavior, and defect formation.
-                For example, in battery materials, the crystal framework strongly affects how ions move
-                through the solid and whether the structure remains stable during cycling.
+                Crystal structure is not just a geometric description — it is the physical origin of material behavior.
+                Every design decision in materials engineering connects back to it:
             </p>
-        </section>
-
-        <section class="lesson-section">
-            <h2>Summary</h2>
-            <p>
-                Crystal structure is one of the most fundamental ideas in solid state physics. To understand
-                solids, we need to understand how atoms repeat in space, how that repetition is described by
-                lattices and unit cells, and how structure governs physical properties.
-            </p>
-        </section>
-
-        <section class="lesson-section">
-            <h2>Watch the Lesson</h2>
-            <p>
-                Later, you can place your YouTube lecture here so readers can learn from both written notes
-                and your explanation.
-            </p>
-            <div class="video-placeholder">
-                <p>YouTube video coming soon</p>
+            <ul>
+                <li>FCC metals are generally more ductile than BCC metals because FCC has more slip systems</li>
+                <li>The layered structure of LiCoO₂ enables fast lithium diffusion between layers</li>
+                <li>Defects in crystal structure (vacancies, interstitials) are the key carriers in ionic conductors</li>
+                <li>Phase transformations involve atoms rearranging from one crystal structure to another</li>
+            </ul>
+            <div class="callout key">
+                <span class="callout-icon">&#128273;</span>
+                <div class="callout-body">
+                    <strong>The central principle</strong>
+                    <p>Structure → Properties → Performance. This chain starts with crystal structure.
+                    Understanding it quantitatively is what separates materials science from materials selection.</p>
+                </div>
             </div>
+        </section>
+
+        <section class="lesson-section" id="video">
+            <div class="lesson-section-num">Section 09</div>
+            <h2>Video Lesson</h2>
+            <p>A video lecture will be embedded here once recorded.</p>
+            <div class="video-placeholder">
+                <span>&#127916;</span>
+                YouTube video coming soon
+            </div>
+        </section>
+
+        <section class="learning-reference">
+            <h2>References</h2>
+            <p>1. Kittel, C. (2004). <em>Introduction to Solid State Physics</em> (8th ed.). Wiley.</p>
+            <p>2. Callister, W. D., &amp; Rethwisch, D. G. (2018). <em>Materials Science and Engineering: An Introduction</em> (10th ed.). Wiley.</p>
+            <p>3. Ashcroft, N. W., &amp; Mermin, N. D. (1976). <em>Solid State Physics</em>. Holt, Rinehart and Winston.</p>
         </section>
 
     </main>
 
-    <footer>
-        <p>© 2026 Fahri Physics</p>
-    </footer>
+    <!-- TOC SIDEBAR -->
+    <aside class="lesson-toc">
+        <div class="lesson-toc-title">On this page</div>
+        <ol>
+            <li><a href="#what-is-crystal">What is Crystal Structure?</a></li>
+            <li><a href="#lattice-basis">Lattice and Basis</a></li>
+            <li><a href="#unit-cell">Unit Cell &amp; Parameters</a></li>
+            <li><a href="#crystal-systems">Seven Crystal Systems</a></li>
+            <li><a href="#cubic-structures">Cubic Structures in Detail</a></li>
+            <li><a href="#coordination">Coordination &amp; Packing</a></li>
+            <li><a href="#periodicity">Why Periodicity is Powerful</a></li>
+            <li><a href="#materials-connection">Connection to Materials Science</a></li>
+            <li><a href="#video">Video Lesson</a></li>
+        </ol>
+    </aside>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Ahmad Nurul Fahri &mdash; Fahri Physics</p>
+</footer>
 
 </body>
 </html>

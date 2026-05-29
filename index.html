@@ -17,39 +17,138 @@
     </ul>
 </nav>
 
-<!-- HERO: split layout -->
+<!-- HERO -->
 <section class="hero">
     <div class="hero-text">
-        <span class="hero-tag">Physics → Materials Science</span>
+        <span class="hero-tag">Physics &rarr; Materials Science</span>
         <h1>Understanding matter,<br><em>from first principles</em></h1>
-        <p>A self-paced learning resource that builds intuition for physics and materials science —
-           starting from classical motion, all the way to crystal structures and solid-state behavior.</p>
+        <p>
+            A self-paced learning resource that builds intuition for physics and materials science —
+            starting from classical motion, all the way to crystal structures and solid-state behavior.
+        </p>
         <a href="#topics" class="hero-cta">Browse Topics</a>
     </div>
+
     <div class="hero-visual">
-        <!-- Atom SVG -->
-        <svg viewBox="0 0 280 280" ...> ... </svg>
+        <!-- Atom SVG illustration -->
+        <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Orbits -->
+            <ellipse cx="140" cy="140" rx="110" ry="44" stroke="#b45309" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4"/>
+            <ellipse cx="140" cy="140" rx="110" ry="44" stroke="#b45309" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4" transform="rotate(60 140 140)"/>
+            <ellipse cx="140" cy="140" rx="110" ry="44" stroke="#b45309" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4" transform="rotate(120 140 140)"/>
+            <!-- Nucleus -->
+            <circle cx="140" cy="140" r="18" fill="#b45309" opacity="0.15"/>
+            <circle cx="140" cy="140" r="10" fill="#b45309" opacity="0.5"/>
+            <!-- Electrons -->
+            <circle cx="250" cy="140" r="6" fill="#0f766e"/>
+            <circle cx="85"  cy="103" r="6" fill="#0f766e" transform="rotate(60 140 140)"/>
+            <circle cx="85"  cy="103" r="6" fill="#0f766e" transform="rotate(120 140 140)"/>
+            <!-- Subtle grid dots -->
+            <circle cx="50"  cy="50"  r="2" fill="#b45309" opacity="0.15"/>
+            <circle cx="230" cy="50"  r="2" fill="#b45309" opacity="0.15"/>
+            <circle cx="50"  cy="230" r="2" fill="#b45309" opacity="0.15"/>
+            <circle cx="230" cy="230" r="2" fill="#b45309" opacity="0.15"/>
+        </svg>
     </div>
 </section>
+
+<div class="section-divider"></div>
 
 <!-- LEARNING PATH BAR -->
 <div class="path-bar">
-    Classical Physics → Solid State Physics → Materials Science → Chemistry (coming)
+    <div class="path-bar-inner">
+        <div class="path-step done">
+            <div class="path-step-dot"></div>
+            <span>Classical Physics</span>
+        </div>
+        <span class="path-arrow">&#8594;</span>
+        <div class="path-step active">
+            <div class="path-step-dot"></div>
+            <span>Solid State Physics</span>
+        </div>
+        <span class="path-arrow">&#8594;</span>
+        <div class="path-step">
+            <div class="path-step-dot"></div>
+            <span>Materials Science</span>
+        </div>
+        <span class="path-arrow">&#8594;</span>
+        <div class="path-step">
+            <div class="path-step-dot"></div>
+            <span>Chemistry (coming)</span>
+        </div>
+    </div>
 </div>
 
-<!-- ABOUT -->
-<section class="about-section" id="about"> ... </section>
+<div class="section-divider"></div>
 
-<!-- TOPICS grouped by phase -->
-<section class="topics-section" id="topics">
-    <div class="topic-group"> <!-- Classical Physics -->
-        Kinematics (linked), Thermodynamics (coming soon)
-    </div>
-    <div class="topic-group"> <!-- Solid State Physics -->
-        Solid State Physics (linked), Crystal Structures (linked), Diffusion (coming soon)
+<!-- ABOUT -->
+<section class="about-section" id="about">
+    <span class="about-label">About</span>
+    <div class="about-body">
+        <h2>Why this site?</h2>
+        <p>
+            Physics is the foundation of materials science. Before understanding why a material conducts electricity
+            or why one alloy is stronger than another, you need a solid grasp of the underlying physics.
+            This site builds that understanding step by step — intuitively, with real equations and examples.
+        </p>
     </div>
 </section>
 
-<footer>© 2026 Ahmad Nurul Fahri — Fahri Physics</footer>
+<div class="section-divider"></div>
+
+<!-- TOPICS -->
+<section class="topics-section" id="topics">
+    <h2>Topics</h2>
+    <p class="section-sub">Follow the path from classical mechanics to advanced solid-state physics.</p>
+
+    <!-- Group 1 -->
+    <div class="topic-group">
+        <div class="topic-group-label">Classical Physics</div>
+        <div class="topic-grid">
+            <a href="kinematics.html" class="topic-card">
+                <div class="topic-card-icon">&#128295;</div>
+                <h3>Kinematics</h3>
+                <p>Motion, displacement, velocity, and acceleration — the language of moving objects.</p>
+                <span class="topic-card-cta">Start Learning &rarr;</span>
+            </a>
+            <div class="topic-card disabled">
+                <div class="topic-card-icon">&#128293;</div>
+                <h3>Thermodynamics</h3>
+                <p>Heat, energy, and the laws that govern how systems evolve.</p>
+                <span class="topic-card-cta">Coming Soon</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Group 2 -->
+    <div class="topic-group">
+        <div class="topic-group-label">Solid State Physics</div>
+        <div class="topic-grid">
+            <a href="solidstatephysics.html" class="topic-card">
+                <div class="topic-card-icon">&#128142;</div>
+                <h3>Solid State Physics</h3>
+                <p>How atoms arrange in solids and how that controls electrical, optical, and mechanical behavior.</p>
+                <span class="topic-card-cta">Start Learning &rarr;</span>
+            </a>
+            <a href="crystal-structure.html" class="topic-card">
+                <div class="topic-card-icon">&#10024;</div>
+                <h3>Crystal Structures</h3>
+                <p>Lattices, unit cells, and the geometry of ordered matter.</p>
+                <span class="topic-card-cta">Start Learning &rarr;</span>
+            </a>
+            <div class="topic-card disabled">
+                <div class="topic-card-icon">&#128200;</div>
+                <h3>Diffusion</h3>
+                <p>How atoms move through materials — the engine of phase transformations.</p>
+                <span class="topic-card-cta">Coming Soon</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Ahmad Nurul Fahri &mdash; Fahri Physics</p>
+</footer>
+
 </body>
 </html>

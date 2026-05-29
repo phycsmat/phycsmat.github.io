@@ -5,150 +5,244 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solid State Physics | Fahri Physics</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>
 <body>
 
-    <header class="lesson-header">
+<!-- NAV -->
+<nav>
+    <a href="index.html" class="nav-logo">Fahri Physics</a>
+    <ul class="nav-links">
+        <li><a href="index.html#topics">Topics</a></li>
+        <li><a href="index.html#about">About</a></li>
+    </ul>
+</nav>
+
+<!-- HEADER -->
+<header class="lesson-header">
+    <div class="lesson-header-inner">
+        <div class="lesson-breadcrumb">
+            <a href="index.html">Home</a> &rsaquo; Solid State Physics
+        </div>
+        <div class="lesson-category-tag">Solid State Physics</div>
         <h1>Solid State Physics</h1>
-        <p>An introduction to the structure and properties of crystalline solids.</p>
-        <a href="index.html" class="back-button">← Back to Homepage</a>
-    </header>
+        <p>How atomic arrangement in solids controls electrical, optical, and mechanical behavior.</p>
+        <div class="lesson-header-meta">
+            <a href="index.html" class="back-button">&#8592; Back to Topics</a>
+            <span class="lesson-read-time">~10 min read</span>
+        </div>
+    </div>
+</header>
 
-    <main class="lesson-container">
+<!-- BODY -->
+<div class="lesson-body">
 
-        <section class="lesson-section">
+    <main class="lesson-content">
+
+        <section class="lesson-section" id="what-is-ssp">
+            <div class="lesson-section-num">Section 01</div>
             <h2>What is Solid State Physics?</h2>
             <p>
-                Solid state physics is the branch of physics that studies the properties of solid materials.
-                It focuses on how atoms are arranged in solids, how electrons behave inside them, and how
-                these microscopic features determine macroscopic properties such as electrical conductivity,
-                magnetism, optical behavior, and mechanical strength.
+                Solid state physics studies the physical properties of solid materials — how atoms arrange themselves,
+                how electrons behave inside them, and how these microscopic features determine macroscopic properties
+                like electrical conductivity, magnetism, and mechanical strength.
             </p>
             <p>
-                This field forms the foundation of modern materials science and is essential for understanding
-                semiconductors, metals, insulators, batteries, magnetic materials, superconductors, and many
-                other functional materials.
+                It forms the scientific foundation of modern materials science, and is essential for understanding
+                semiconductors, batteries, magnetic materials, superconductors, and structural alloys.
             </p>
-        </section>
-
-        <section class="lesson-section">
-            <h2>Why Study Solids?</h2>
-            <p>
-                Solids are everywhere in modern technology. The devices we use, the materials in batteries,
-                the chips in computers, and the structural components in engineering all depend on the physics
-                of solids. By studying solid state physics, we can understand why some materials conduct
-                electricity, why some are brittle while others are ductile, and how atomic arrangement controls
-                real-world performance.
-            </p>
-        </section>
-
-        <section class="lesson-section">
-            <h2>Basic Classification of Solids</h2>
-
-            <h3>1. Crystalline Solids</h3>
-            <p>
-                In crystalline solids, atoms are arranged in a regular and repeating pattern over long distances.
-                This long-range order makes it possible to describe the structure using lattices and unit cells.
-            </p>
-
-            <h3>2. Amorphous Solids</h3>
-            <p>
-                In amorphous solids, atoms do not show long-range periodic order. Glass is a classic example.
-                These materials may still have short-range order, but they do not have a repeating crystal lattice.
-            </p>
-        </section>
-
-        <section class="lesson-section">
-            <h2>Crystal Lattice and Basis</h2>
-            <p>
-                A crystal structure can be understood as a combination of a lattice and a basis. The lattice
-                gives the repeating geometric arrangement in space, while the basis is the group of atoms attached
-                to each lattice point.
-            </p>
-
-            <p class="equation">
-                \[
-                \text{Crystal Structure} = \text{Lattice} + \text{Basis}
-                \]
-            </p>
-
-            <p>
-                This idea is one of the most important starting points in solid state physics because it connects
-                geometry with chemistry.
-            </p>
-        </section>
-
-        <section class="lesson-section">
-            <h2>Unit Cell</h2>
-            <p>
-                A unit cell is the smallest repeating building block of a crystal. When it is translated in three
-                dimensions, it reproduces the entire crystal structure. The choice of unit cell is not always unique,
-                but it is usually chosen to reflect the symmetry of the crystal as clearly as possible.
-            </p>
-        </section>
-
-        <section class="lesson-section">
-            <h2>Important Topics in Solid State Physics</h2>
-            <div class="topic-grid">
-            <a href="crystal-structure.html" class="topic-card">
-                <h3>Crystal Structure</h3>
-                <p>Learn about lattices, basis, unit cells, and how atoms are arranged in solids.</p>
-                <span>Open Topic →</span>
-            </a>
-
-            <a href="#" class="topic-card">
-                <h3>Reciprocal Lattice</h3>
-                <p>Coming soon.</p>
-                <span>Coming Soon</span>
-            </a>
-
-            <a href="#" class="topic-card">
-                <h3>Band Theory</h3>
-                <p>Coming soon.</p>
-                <span>Coming Soon</span>
-            </a>
-
-            <a href="#" class="topic-card">
-                <h3>Defects in Solids</h3>
-                <p>Coming soon.</p>
-                <span>Coming Soon</span>
-            </a>
+            <div class="callout tip">
+                <span class="callout-icon">&#128161;</span>
+                <div class="callout-body">
+                    <strong>The big idea</strong>
+                    <p>Structure controls properties. The way atoms are arranged determines almost everything about how a material behaves. This is the central principle connecting solid state physics to materials science.</p>
+                </div>
             </div>
         </section>
 
-        <section class="lesson-section">
+        <section class="lesson-section" id="why-solids">
+            <div class="lesson-section-num">Section 02</div>
+            <h2>Why Study Solids?</h2>
+            <p>
+                Solids make up the materials in every device, building, battery, and machine we interact with.
+                The chips in computers, structural components in aircraft, electrodes in lithium-ion batteries —
+                all of their behavior emerges from atomic-scale physics.
+            </p>
+            <p>
+                By understanding solid state physics, we can answer questions like:
+            </p>
+            <ul>
+                <li>Why do metals conduct electricity but ceramics don't?</li>
+                <li>Why is diamond harder than graphite, despite both being pure carbon?</li>
+                <li>Why does a cathode material degrade after many charge cycles?</li>
+            </ul>
+            <div class="callout key">
+                <span class="callout-icon">&#128273;</span>
+                <div class="callout-body">
+                    <strong>Key insight</strong>
+                    <p>All of these questions trace back to atomic structure. Solid state physics gives you the tools to answer them from first principles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section" id="classification">
+            <div class="lesson-section-num">Section 03</div>
+            <h2>Classification of Solids</h2>
+            <p>The most fundamental distinction in solid state physics is whether a material has long-range atomic order:</p>
+
+            <div class="def-grid">
+                <div class="def-card">
+                    <div class="def-card-term">Crystalline</div>
+                    <div class="def-card-desc">Atoms arranged in a regular, repeating pattern extending across the entire material. Describable by a lattice.</div>
+                    <span class="def-card-badge badge-vector">Long-range order</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">Amorphous</div>
+                    <div class="def-card-desc">No long-range periodic order. May have short-range order. Classic example: glass.</div>
+                    <span class="def-card-badge badge-scalar">No long-range order</span>
+                </div>
+                <div class="def-card">
+                    <div class="def-card-term">Polycrystalline</div>
+                    <div class="def-card-desc">Many small crystalline grains oriented in different directions. Most engineering metals fall here.</div>
+                    <span class="def-card-badge badge-vector">Grain structure</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section" id="lattice-basis">
+            <div class="lesson-section-num">Section 04</div>
+            <h2>Crystal Lattice and Basis</h2>
+            <p>
+                Every crystal structure can be decomposed into two parts:
+            </p>
+            <ul>
+                <li>A <strong>lattice</strong> — an infinite, periodic set of points in space</li>
+                <li>A <strong>basis</strong> — the group of atoms attached to each lattice point</li>
+            </ul>
+            <div class="equation">
+                \[ \text{Crystal Structure} = \text{Lattice} + \text{Basis} \]
+            </div>
+            <p>
+                This decomposition is one of the most powerful ideas in solid state physics.
+                It connects geometry (the lattice) with chemistry (the basis), and makes the
+                infinite complexity of a crystal tractable.
+            </p>
+            <div class="callout note">
+                <span class="callout-icon">&#128204;</span>
+                <div class="callout-body">
+                    <strong>Example</strong>
+                    <p>In an FCC metal like copper, the lattice is face-centered cubic and the basis is a single Cu atom. In a compound like NaCl, the basis contains one Na and one Cl atom per lattice point.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section" id="unit-cell">
+            <div class="lesson-section-num">Section 05</div>
+            <h2>Unit Cell</h2>
+            <p>
+                The unit cell is the smallest repeating building block of a crystal. Translating it in three dimensions
+                reproduces the entire crystal. It is chosen to reflect the full symmetry of the crystal as clearly as possible.
+            </p>
+            <h3>Common Unit Cell Types</h3>
+            <ul>
+                <li><strong>Simple Cubic (SC)</strong> — atoms only at corners. Rare in nature (polonium).</li>
+                <li><strong>Body-Centered Cubic (BCC)</strong> — corner atoms plus one in the center. Iron (at room temperature), tungsten.</li>
+                <li><strong>Face-Centered Cubic (FCC)</strong> — corners plus one on each face. Copper, aluminum, gold. Close-packed.</li>
+            </ul>
+            <div class="callout tip">
+                <span class="callout-icon">&#128161;</span>
+                <div class="callout-body">
+                    <strong>Packing efficiency</strong>
+                    <p>FCC and HCP are the most efficiently packed structures (~74% volume filled). This high packing fraction affects density, ductility, and slip behavior in metals.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section" id="subtopics">
+            <div class="lesson-section-num">Section 06</div>
+            <h2>Where to Go Next</h2>
+            <p>Solid state physics is a deep field. These are the key topics that follow from what you've learned here:</p>
+            <div class="topic-grid">
+                <a href="crystal-structure.html" class="topic-card">
+                    <div class="topic-card-icon">&#10024;</div>
+                    <h3>Crystal Structure</h3>
+                    <p>Lattices, basis, Miller indices, and how to describe atomic arrangements precisely.</p>
+                    <span class="topic-card-cta">Open Topic &rarr;</span>
+                </a>
+                <div class="topic-card disabled">
+                    <div class="topic-card-icon">&#128202;</div>
+                    <h3>Reciprocal Lattice</h3>
+                    <p>The Fourier space representation of a crystal — essential for diffraction and band theory.</p>
+                    <span class="topic-card-cta">Coming Soon</span>
+                </div>
+                <div class="topic-card disabled">
+                    <div class="topic-card-icon">&#9889;</div>
+                    <h3>Band Theory</h3>
+                    <p>Why some materials conduct, some insulate, and some sit in between.</p>
+                    <span class="topic-card-cta">Coming Soon</span>
+                </div>
+                <div class="topic-card disabled">
+                    <div class="topic-card-icon">&#128295;</div>
+                    <h3>Defects in Solids</h3>
+                    <p>Point defects, dislocations, and grain boundaries — and why imperfections matter.</p>
+                    <span class="topic-card-cta">Coming Soon</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section" id="connection">
+            <div class="lesson-section-num">Section 07</div>
             <h2>Connection to Materials Science</h2>
             <p>
-                In materials science, solid state physics helps explain why structure controls properties.
-                For example, the crystal framework of a cathode material influences ion diffusion pathways,
-                redox behavior, electronic conductivity, and structural stability. This is why understanding
-                the fundamentals of solids is so valuable before diving into advanced functional materials.
+                Solid state physics is the bridge between fundamental quantum mechanics and practical materials engineering.
+                In materials science, every design decision — choosing a cathode material, an alloy composition, or a
+                coating thickness — traces back to atomic-level physics covered in this field.
+            </p>
+            <p>
+                For example, the crystal structure of a battery cathode material (e.g., layered LiCoO&#8322;)
+                directly determines how lithium ions diffuse through it, how electrons conduct, and how the
+                structure responds to repeated cycling. Understanding the physics lets you predict and engineer the behavior.
             </p>
         </section>
 
-        <section class="lesson-section">
-            <h2>Watch the Lesson</h2>
-            <p>
-                Later, you can embed your YouTube lesson here and connect the written explanation with your video lecture.
-            </p>
+        <section class="lesson-section" id="video">
+            <div class="lesson-section-num">Section 08</div>
+            <h2>Video Lesson</h2>
+            <p>A video lecture will be embedded here once recorded.</p>
             <div class="video-placeholder">
-                <p>YouTube video coming soon</p>
+                <span>&#127916;</span>
+                YouTube video coming soon
             </div>
         </section>
 
         <section class="learning-reference">
             <h2>References</h2>
-            <p>
-                1. Kittel, C. (2004). Introduction to Solid State Physics (8th ed.). Wiley.
-            </p>
+            <p>1. Kittel, C. (2004). <em>Introduction to Solid State Physics</em> (8th ed.). Wiley.</p>
+            <p>2. Ashcroft, N. W., &amp; Mermin, N. D. (1976). <em>Solid State Physics</em>. Holt, Rinehart and Winston.</p>
         </section>
 
     </main>
 
-    <footer>
-        <p>© 2026 Fahri Physics</p>
-    </footer>
+    <!-- TOC SIDEBAR -->
+    <aside class="lesson-toc">
+        <div class="lesson-toc-title">On this page</div>
+        <ol>
+            <li><a href="#what-is-ssp">What is Solid State Physics?</a></li>
+            <li><a href="#why-solids">Why Study Solids?</a></li>
+            <li><a href="#classification">Classification of Solids</a></li>
+            <li><a href="#lattice-basis">Crystal Lattice &amp; Basis</a></li>
+            <li><a href="#unit-cell">Unit Cell</a></li>
+            <li><a href="#subtopics">Where to Go Next</a></li>
+            <li><a href="#connection">Connection to Materials Science</a></li>
+            <li><a href="#video">Video Lesson</a></li>
+        </ol>
+    </aside>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Ahmad Nurul Fahri &mdash; Fahri Physics</p>
+</footer>
 
 </body>
 </html>
