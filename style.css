@@ -152,14 +152,6 @@ nav {
     opacity: 0.85;
 }
 
-/* ===== DIVIDER ===== */
-.section-divider {
-    height: 1px;
-    background: var(--cream-3);
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
 /* ===== ABOUT ===== */
 .about-section {
     max-width: 1100px;
@@ -172,11 +164,11 @@ nav {
 
 .about-label {
     font-family: 'Lora', serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--ink-3);
+    color: var(--ink-2);
     min-width: 80px;
     padding-top: 5px;
 }
